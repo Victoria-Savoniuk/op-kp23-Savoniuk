@@ -5,12 +5,28 @@ namespace Lab1_Task1
     {
         static void Main(string[] args)
         {
+            /* Test cases :
+             * case 1: x0 = -1,5; xn = 3,5; dx = 0,5
+             * case 2: x0 = 2; xn = -1,5; dx = 0,5
+             * case 3: x0 = -2; xn = 2; dx = 0,5
+             * case 4: x0 = -4,5; xn = -2; dx = 0,5
+             */
             Console.WriteLine("Enter the initial value x0");
             double x0 = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Enter the final value xn");
             double xn = Convert.ToDouble(Console.ReadLine());
+            while (xn <= x0)
+            {
+                Console.WriteLine("The final value of xn must be greater than the initial value of x0. Try again.");
+                xn = Convert.ToDouble(Console.ReadLine());
+            }
             Console.WriteLine("Enter dx value:");
             double dx = Convert.ToDouble(Console.ReadLine());
+            while (dx <= 0)
+            {
+                Console.WriteLine("The number of intermediate values ​​from x0 to xn must be greater than 0. Try again.");
+                dx = Convert.ToDouble(Console.ReadLine());
+            }
             double n = (xn - x0) / dx;
             double a = -1.25;
             double b = -1.5;
