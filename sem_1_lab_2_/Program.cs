@@ -40,6 +40,117 @@ namespace Labs2
         {
             counter++;
         }
+        
+         public static int Union(int p, int q, int n, int[] matrix)
+        {
+            int pRoot = Root(p, matrix);
+            int qRoot = Root(q, matrix);
+
+            if (matrix[pRoot] <= matrix[qRoot])
+            {
+                matrix[qRoot] = pRoot;
+
+                if (q - qRoot >= n)
+                {
+                    int j_q = q;
+
+                    while (j_q >= n)
+                    {
+                        j_q = j_q - n;
+                    }
+
+                    int i_q = (q - j_q) / n;
+                    int j_qRoot = qRoot;
+
+                    if (qRoot >= n)
+                    {
+                        j_qRoot = qRoot - n;
+                    }
+
+                    int i_qRoot = (qRoot - j_qRoot) / n;
+
+                    for (int i = i_qRoot; i_q - i != 0; i++)
+                    {
+                        for (int j = j_qRoot; j < n; j++)
+                        {
+                            Connect(i, j, n, matrix);
+                        }
+                    }
+
+                }
+
+                matrix[q] = pRoot;
+            }
+            else
+            {
+                matrix[pRoot] = qRoot;
+                matrix[p] = qRoot;
+            }
+
+            return matrix[qRoot];
+        }
+
+        private static int Root(int p, int[] matrix)
+        {
+            while (p != matrix[p])
+            {
+                p = matrix[p];
+            }
+            return p;
+        }
+
+        public static void Connect(int i, int j, int n, int[] matrix)
+        {
+            if (matrix[i * n + j] != -1)
+            {
+                if (i != 0)
+                {
+                    if (matrix[(i - 1) * n + j] != -1)
+                    {
+                        Union(i * n + j, (i - 1) * n + j, n, matrix);
+                    }
+                }
+
+                if (j != 0)
+                {
+                    if (matrix[i * n + (j - 1)] != -1)
+                    {
+                        Union(i * n + j, i * n + (j - 1), n, matrix);
+                    }
+                }
+
+                if (j != n - 1)
+                {
+                    if (matrix[i * n + (j + 1)] != -1)
+                    {
+                        Union(i * n + j, i * n + (j + 1), n, matrix);
+                    }
+                }
+            }
+        }
+
+        public static bool Percolates(int[] matrix, int n)
+        {
+            for (int i = 0; i < n; i++)
+            {
+                if (matrix[i] != -1)
+                {
+                    for (int j = 0; j < n; j++)
+                    {
+                        if (matrix[n * (n - 1) + j] == matrix[i])
+                        {
+                            number_Percolates = matrix[i];
+                            Console.WriteLine();
+                            Print(matrix, n, number_Percolates);
+                            Console.WriteLine();
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+
 
         static void Print(int[] matrix, int n, int number_of_percolation)
         {
@@ -165,6 +276,26 @@ namespace Labs2
 
                 Open(row, col, n, matrix);
             }
+             Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
+            Console.WriteLine("\t\t\t   PPercolation");
+            Console.WriteLine();
+
+            Print(matrix, n, number_Percolates);
+
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    Connect(i, j, n, matrix);
+                }
+            }
+
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.WriteLine($"Number of open sites: {counter}");
+            Console.WriteLine("Percolation: " + Percolates(matrix, n));
+            Console.ReadKey();
         }
     }
 }
