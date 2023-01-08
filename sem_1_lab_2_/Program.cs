@@ -297,5 +297,252 @@ namespace Labs2
             Console.WriteLine("Percolation: " + Percolates(matrix, n));
             Console.ReadKey();
         }
+        static bool TestOpen(int[] matrix)
+        {
+            int test_n = 3;
+            Open(1, 1, test_n, matrix);
+            Open(1, 2, test_n, matrix);
+            Open(2, 2, test_n, matrix);
+            Open(2, 3, test_n, matrix);
+            Open(3, 3, test_n, matrix);
+
+            bool expected1 = true;
+            bool expected2 = true;
+            bool expected3 = true;
+            bool expected4 = true;
+            bool expected5 = true;
+
+            bool actual1 = IsOpen(1, 1, test_n, matrix);
+            bool actual2 = IsOpen(1, 2, test_n, matrix);
+            bool actual3 = IsOpen(2, 2, test_n, matrix);
+            bool actual4 = IsOpen(2, 3, test_n, matrix);
+            bool actual5 = IsOpen(3, 3, test_n, matrix);
+
+            if (expected1 != actual1)
+            {
+                Console.WriteLine("TestOpen: case1 is failed");
+                return false;
+            }
+
+            if (expected2 != actual2)
+            {
+                Console.WriteLine("TestOpen: case2 is failed");
+                return false;
+            }
+
+            if (expected3 != actual3)
+            {
+                Console.WriteLine("TestOpen: case3 is failed");
+                return false;
+            }
+
+            if (expected4 != actual4)
+            {
+                Console.WriteLine("TestOpen: case4 is failed");
+                return false;
+            }
+
+            if (expected5 != actual5)
+            {
+                Console.WriteLine("TestOpen: case5 is failed");
+                return false;
+            }
+
+            Console.WriteLine("TestOpen: all cases passed");
+            return true;
+
+        }
+        static bool TestGetIndex()
+        {
+            int expected1 = 0; // row = 1; col = 1
+            int expected2 = 1; // row = 1; col = 2
+            int expected3 = 4; // row = 2; col = 2
+            int expected4 = 5; // row = 2; col = 3
+            int expected5 = 8; // row = 3; col = 3
+
+            int actual1 = GetIndex(1, 1, 3);
+            int actual2 = GetIndex(1, 2, 3);
+            int actual3 = GetIndex(2, 2, 3);
+            int actual4 = GetIndex(2, 3, 3);
+            int actual5 = GetIndex(3, 3, 3);
+
+            if (expected1 != actual1)
+            {
+                Console.WriteLine("TestGetIndex: case1 is failed");
+                return false;
+            }
+
+            if (expected2 != actual2)
+            {
+                Console.WriteLine("TestGetIndex: case2 is failed");
+                return false;
+            }
+
+            if (expected3 != actual3)
+            {
+                Console.WriteLine("TestGetIndex: case3 is failed");
+                return false;
+            }
+
+            if (expected4 != actual4)
+            {
+                Console.WriteLine("TestGetIndex: case4 is failed");
+                return false;
+            }
+
+            if (expected5 != actual5)
+            {
+                Console.WriteLine("TestGetIndex: case5 is failed");
+                return false;
+            }
+
+            Console.WriteLine("TestGetIndex: all cases passed");
+            return true;
+        }
+
+        static bool TestIsOpen(int test_n, int[] matrix)
+        {
+            bool expected1 = false;
+            bool expected2 = true;
+
+
+            bool actual1 = IsOpen(1, 3, test_n, matrix);
+            bool actual2 = IsOpen(1, 1, test_n, matrix);
+
+
+            if (expected1 != actual1)
+            {
+                Console.WriteLine("TestIsOpen: case1 is failed");
+                return false;
+            }
+
+            if (expected2 != actual2)
+            {
+                Console.WriteLine("TestIsOpen: case2 is failed");
+                return false;
+            }
+
+            Console.WriteLine("TestIsOpen: all cases passed");
+            return true;
+        }
+        static bool TestNumberOfOpenSites()
+        {
+            int expected = 5;
+
+            int actual = counter;
+
+            if (expected != actual)
+            {
+                Console.WriteLine("TestNumberOfOpenSites: case is failed");
+                return false;
+            }
+
+            Console.WriteLine("TestNumberOfOpenSites: all cases passed");
+            return true;
+        }
+
+        static bool TestUnion(int[] matrix)
+        {
+            int expected1 = 0; // p = matrix[0], q = matrix[1]
+            int expected2 = 0; // p = matrix[1], q = matrix[4]
+            int expected3 = 0; // p = matrix[4], q = matrix[5]
+            int expected4 = 0; // p = matrix[5], q = matrix[8]
+
+            int actual1 = Union(0, 1, 3, matrix);
+            int actual2 = Union(1, 4, 3, matrix);
+            int actual3 = Union(4, 5, 3, matrix);
+            int actual4 = Union(5, 8, 3, matrix);
+
+
+            if (expected1 != actual1)
+            {
+                Console.WriteLine("Testunion: case1 is failed");
+                return false;
+            }
+
+            if (expected2 != actual2)
+            {
+                Console.WriteLine("Testunion: case2 is failed");
+                return false;
+            }
+
+            if (expected3 != actual3)
+            {
+                Console.WriteLine("Testunion: case3 is failed");
+                return false;
+            }
+
+            if (expected4 != actual4)
+            {
+                Console.WriteLine("Testunion: case4 is failed");
+                return false;
+            }
+
+            Console.WriteLine("Testunion: all cases passed");
+            return true;
+        }
+
+        static bool TestRoot(int[] matrix)
+        {
+            int expected1 = 0; // p = 0
+            int expected2 = 0; // p = 1
+            int expected3 = 0; // p = 4
+            int expected4 = 0; // p = 5
+            int expected5 = 0; // p = 8
+
+            int actual1 = Root(0, matrix);
+            int actual2 = Root(1, matrix);
+            int actual3 = Root(4, matrix);
+            int actual4 = Root(5, matrix);
+            int actual5 = Root(8, matrix);
+
+            if (expected1 != actual1)
+            {
+                Console.WriteLine("Testroot: case1 is failed");
+                return false;
+            }
+
+            if (expected2 != actual2)
+            {
+                Console.WriteLine("Testroot: case2 is failed");
+                return false;
+            }
+
+            if (expected3 != actual3)
+            {
+                Console.WriteLine("Testroot: case3 is failed");
+                return false;
+            }
+
+            if (expected4 != actual4)
+            {
+                Console.WriteLine("Testroot: case4 is failed");
+                return false;
+            }
+
+            if (expected5 != actual5)
+            {
+                Console.WriteLine("Testroot: case5 is failed");
+                return false;
+            }
+
+            Console.WriteLine("Testroot: all cases passed");
+            return true;
+        }
+        static bool TestPercolates(int[] matrix)
+        {
+            bool expected = true;
+
+            bool actual = Percolates(matrix, 3);
+
+            if (expected != actual)
+            {
+                Console.WriteLine("TestPercolates: case is failed");
+                return false;
+            }
+
+            Console.WriteLine("TestPercolates: all cases passed");
+            return true;
+        }
     }
 }
