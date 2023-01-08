@@ -40,8 +40,7 @@ namespace Labs2
         {
             counter++;
         }
-        
-         public static int Union(int p, int q, int n, int[] matrix)
+        public static int Union(int p, int q, int n, int[] matrix)
         {
             int pRoot = Root(p, matrix);
             int qRoot = Root(q, matrix);
@@ -151,7 +150,6 @@ namespace Labs2
             return false;
         }
 
-
         static void Print(int[] matrix, int n, int number_of_percolation)
         {
             for (int i = 0; i < n; i++)
@@ -188,23 +186,19 @@ namespace Labs2
         static void Main(string[] args)
         {
             /* Test cases:
-             * Open: row = 1; col = 1
-             *       row = 1; col = 2
-             *       row = 2; col = 2
-             *       row = 2; col = 3
-             *       row = 3; col = 3
-             *  Output:
-             *        0    0  -1
-             *        -1   0   0
-             *        -1  -1   0
-             *        
-             *    Number of open sites: 5
-             *    Percolation: true
-             */
-            Console.WindowHeight = 30;
-            Console.WindowWidth = 70;
-            Console.BackgroundColor = ConsoleColor.White;
-            Console.Clear();
+            * Open: row = 1; col = 1
+            *       row = 1; col = 2
+            *       row = 2; col = 2
+            *       row = 2; col = 3
+            *       row = 3; col = 3
+            *  Output:
+            *        0    0  -1
+            *        -1   0   0
+            *        -1  -1   0
+            *        
+            *    Number of open sites: 5
+            *    Percolation: true
+            */
 
             Console.WindowHeight = 30;
             Console.WindowWidth = 70;
@@ -276,7 +270,8 @@ namespace Labs2
 
                 Open(row, col, n, matrix);
             }
-             Console.WriteLine();
+
+            Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("\t\t\t   PPercolation");
             Console.WriteLine();
@@ -297,6 +292,7 @@ namespace Labs2
             Console.WriteLine("Percolation: " + Percolates(matrix, n));
             Console.ReadKey();
         }
+
         static bool TestOpen(int[] matrix)
         {
             int test_n = 3;
