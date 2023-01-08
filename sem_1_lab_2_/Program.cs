@@ -3,6 +3,7 @@ namespace Labs2
 {
     class Percolation
     {
+        static public int counter = 0;
         static public int number_Percolates = -2;
 
         static void Init(int n, int[] matrix)
@@ -11,6 +12,33 @@ namespace Labs2
             {
                 matrix[i] = -1;
             }
+        }
+
+        static void Open(int row, int col, int n, int[] matrix)
+        {
+            if (!(IsOpen(row, col, n, matrix)))
+            {
+                matrix[GetIndex(row, col, n)] = GetIndex(row, col, n);
+                NumberOfOpenSites();
+            }
+            else
+            {
+                Console.WriteLine("This cell is already open, try to open another");
+            }
+        }
+
+        static int GetIndex(int row, int col, int n)
+        {
+            return (row - 1) * n + (col - 1);
+        }
+
+        static bool IsOpen(int row, int col, int n, int[] matrix)
+        {
+            return matrix[GetIndex(row, col, n)] != -1;
+        }
+        static void NumberOfOpenSites()
+        {
+            counter++;
         }
 
         static void Print(int[] matrix, int n, int number_of_percolation)
@@ -135,7 +163,7 @@ namespace Labs2
                     col = Convert.ToInt32(Console.ReadLine());
                 }
 
-               
+                Open(row, col, n, matrix);
             }
         }
     }
