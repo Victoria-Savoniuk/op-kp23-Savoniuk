@@ -75,7 +75,11 @@ namespace ConsoleApp
 
             using (StreamWriter sw = new StreamWriter(outputPath))
             {
-               
+               for (int i = 0; i < lines.Length; i++)
+                {
+                    sw.Write(lines[i] + "\n");
+                    Console.WriteLine(lines[i]);
+                }
             }
         }
         static int Sort(string a, string b)
