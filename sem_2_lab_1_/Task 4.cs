@@ -7,6 +7,25 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
+            /*
+            Test case1:
+              Victoria;Savoniuk;96
+              Denys;Tabachuk;98
+              Valeria;Kovalchuk;53
+              Nazar;Myhlovets;62
+              Valeria;Eismont;78
+              Output:
+              Valeria Kovalchuk - 53
+
+            Test case2:
+              Victoria;Savoniuk;96
+              Denys;Tabachuk;98
+              Valeria;Kovalchuk;88
+              Nazar;Myhlovets;62
+              Valeria;Eismont;78
+              Output:
+              There are no students whose score is less than 60
+             */
             string filePath = Path.Combine(Directory.GetCurrentDirectory(), "Список.csv");
 
             
@@ -28,7 +47,7 @@ namespace ConsoleApp
             }
             if (n == 0)
             {
-                Console.WriteLine("Таких студентів немає");
+                Console.WriteLine("There are no students whose score is less than 60");
             }
         }
         static void Split()
