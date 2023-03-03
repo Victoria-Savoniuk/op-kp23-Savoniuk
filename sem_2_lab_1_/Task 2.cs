@@ -15,6 +15,13 @@ namespace Files
             fs.Close();
 
             StreamWriter sr = new StreamWriter(pathName);
+            var rand = new Random();
+            int count = 15;
+            for (int i = 0; i < count; i++)
+            {
+
+                sr.WriteLine(rand.Next(-50, 50));
+            }
             sr.Close();
 
             int max = 0;
