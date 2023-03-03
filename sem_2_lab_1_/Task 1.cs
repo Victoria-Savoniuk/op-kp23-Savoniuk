@@ -13,7 +13,8 @@ namespace Files
             fs.Close();
 
             StreamWriter sw = new StreamWriter(pathName);
-           
+            sw.WriteLine("Hello World!!");
+            sw.WriteLine("Programing");
             sw.Close();
 
             string text = File.ReadAllText(pathName);
