@@ -27,6 +27,16 @@ namespace Files
             int max = 0;
             
             StreamReader s = new StreamReader(pathName);
+            max = Convert.ToInt32(s.ReadLine());
+            int num;
+            for (int i = 1; i < count; i++)
+            {
+                num = Convert.ToInt32(s.ReadLine());
+                if (max < num)
+                {
+                    max = num;
+                }
+            }
             s.Close();
 
             Console.WriteLine(max);
