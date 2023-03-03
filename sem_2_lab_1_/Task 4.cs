@@ -33,7 +33,13 @@ namespace ConsoleApp
             int length = lines.Length * 3;
             string[] Mark = new string[length];
 
-            Split();
+            int index = 0;
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                Split(lines[i], Mark, index);
+                index += 3;
+            }
             
             int n = 0;
 
@@ -50,9 +56,28 @@ namespace ConsoleApp
                 Console.WriteLine("There are no students whose score is less than 60");
             }
         }
-        static void Split()
+        static void Split(string line, string[] Mark, int index)
         {
-            
+             string word = "";
+            for (int i = 0; i < line.Length; i++)
+            {
+                if (line[i] != ';')
+                {
+                    word += line[i];
+
+                }
+                else
+                {
+                    Mark[index] = word;
+                    word = "";
+                    index++;
+                }
+                if (i == line.Length - 1)
+                {
+                    Mark[index] = word;
+                    index++;
+                }
+            }
         }
     }
 }
