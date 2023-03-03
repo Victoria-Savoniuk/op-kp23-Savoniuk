@@ -5,7 +5,26 @@ namespace Files
 {
     class Program
     {
-
+        /*
+         Test case:
+          -1
+          -48
+          -3
+           7
+          -16
+           15
+           3
+           49
+           42
+           46
+           21
+           1
+          -41
+          -19
+          -30
+         Output:
+           49
+         */
         static string OUTPUT_FILE_PATH = Path.Combine(Directory.GetCurrentDirectory(), "max.txt");
         static void Main(string[] args)
         {
