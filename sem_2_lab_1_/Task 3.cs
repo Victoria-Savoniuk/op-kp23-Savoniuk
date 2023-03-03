@@ -61,16 +61,59 @@ namespace ConsoleApp
 
             string[] lines = File.ReadAllLines(filePath);
 
-            Sort();
+             for (int i = 1; i < lines.Length; i++)
+            {
+                string key = lines[i];
+                int j = i - 1;
+                while (j >= 0 && Sort(key, lines[j]) == 1)
+                {
+                    lines[j + 1] = lines[j];
+                    j = j - 1;
+                }
+                lines[j + 1] = key;
+            }
 
             using (StreamWriter sw = new StreamWriter(outputPath))
             {
                
             }
         }
-        static int Sort()
+        static int Sort(string a, string b)
         {
-            return 1;
+            int lenght;
+            if (a.Length <= b.Length)
+            {
+                lenght = a.Length;
+
+            }
+            else
+            {
+                lenght = b.Length;
+            }
+            for (int i = 0; i < lenght; i++)
+            {
+                if (a[i] > b[i])
+                {
+                    return -1;
+                }
+                else if (a[i] < b[i])
+                {
+                    return 1;
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            if (a.Length <= b.Length)
+            {
+                return 1;
+
+            }
+            else
+            {
+                return -1;
+            }
         }
     }
 }
