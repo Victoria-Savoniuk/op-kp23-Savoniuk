@@ -27,6 +27,7 @@ namespace Labs
               Output:
               There are no students with a score above 95
              */
+
             string filePath = Path.Combine(Directory.GetCurrentDirectory(), "Список.csv");
             string inputFilePath = Path.Combine(Directory.GetCurrentDirectory(), "input.bin");
             string outputFilePath = Path.Combine(Directory.GetCurrentDirectory(), "output.bin");
@@ -34,7 +35,10 @@ namespace Labs
             string[] lines = File.ReadAllLines(filePath);
 
             BinaryWriter bw = new BinaryWriter(new FileStream(inputFilePath, FileMode.Create));
-            
+             for (int i = 0; i < lines.Length; i++)
+            {
+                bw.Write(lines[i]);
+            }
             bw.Close();
 
             BinaryReader br = new BinaryReader(new FileStream(inputFilePath, FileMode.Open));
