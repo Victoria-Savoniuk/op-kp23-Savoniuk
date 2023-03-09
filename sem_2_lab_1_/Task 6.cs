@@ -49,5 +49,28 @@ namespace Labs
 
             bw1.Close();
         }
+        static void Split(string line, string[] Mark, int index)
+        {
+            string word = "";
+            for (int i = 0; i < line.Length; i++)
+            {
+                if (line[i] != ';')
+                {
+                    word += line[i];
+
+                }
+                else
+                {
+                    Mark[index] = word;
+                    word = "";
+                    index++;
+                }
+                if (i == line.Length - 1)
+                {
+                    Mark[index] = word;
+                    index++;
+                }
+            }
+        }
     }
 }
