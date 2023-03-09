@@ -54,6 +54,7 @@ namespace Labs
             br.Close();
 
             int n = 0;
+
             BinaryWriter bw1 = new BinaryWriter(new FileStream(outputFilePath, FileMode.Create));
             for (int i = 2; i < length; i += 3)
             {
