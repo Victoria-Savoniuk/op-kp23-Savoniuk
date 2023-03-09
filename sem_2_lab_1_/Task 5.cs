@@ -37,7 +37,16 @@ namespace Labs
             sw.Close();
 
             StreamReader sr = new StreamReader(filePath);
+            int character;
+            int lenght = 0;
 
+            while ((character = sr.Read()) != -1)
+            {
+                if ((char)character == ' ' || (char)character == '\n')
+                {
+                    lenght++;
+                }
+            }
             sr.Close();
         }
     }
