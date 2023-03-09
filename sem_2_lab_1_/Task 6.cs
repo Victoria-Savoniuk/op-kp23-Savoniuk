@@ -42,7 +42,15 @@ namespace Labs
             bw.Close();
 
             BinaryReader br = new BinaryReader(new FileStream(inputFilePath, FileMode.Open));
+            int length = lines.Length * 3;
+            string[] Mark = new string[length];
+            int index = 0;
 
+            for (int i = 0; i < lines.Length; i++)
+            {
+                Split(br.ReadString(), Mark, index);
+                index += 3;
+            }
             br.Close();
 
             BinaryWriter bw1 = new BinaryWriter(new FileStream(outputFilePath, FileMode.Create));
