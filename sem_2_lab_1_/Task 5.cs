@@ -49,7 +49,6 @@ namespace Labs
             }
 
            sr.BaseStream.Seek(0, SeekOrigin.Begin);
-
             // Масив для зберігання унікальних слів
             string[] words = new string[lenght];
             int index_words = 0;
@@ -91,6 +90,10 @@ namespace Labs
                     }
                     word = "";
                 }
+            }
+            for (int i = 0; i < index_words; i++)
+            {
+                Console.WriteLine($"{words[i]}: {counts[i]}");
             }
             sr.Close();
         }
