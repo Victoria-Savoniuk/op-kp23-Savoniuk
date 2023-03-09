@@ -59,6 +59,39 @@ namespace Labs
             int index_counts = 0;
 
             string word = "";
+
+            // Читаємо файл по одному символу за раз
+            while ((character = sr.Read()) != -1)
+            {
+                bool Litle = (character >= 65 && character <= 90) || (character >= 97 && character <= 122) || character == 39;
+                if (Litle)
+                {
+                    word += (char)character;
+                }
+                else
+                {
+                    // Порівнюємо поточне слово зі словами, які ми вже знайшли
+                    bool found = false;
+                    for (int i = 0; i < index_words; i++)
+                    {
+                        if (words[i] == word)
+                        {
+                            counts[i]++;
+                            found = true;
+                            break;
+                        }
+                    }
+                    // Якщо поточне слово ще не зустрічалося, додаємо його до масиву
+                    if (!found && word != "")
+                    {
+                        words[index_words] = word;
+                        counts[index_counts] = 1;
+                        index_words++;
+                        index_counts++;
+                    }
+                    word = "";
+                }
+            }
             sr.Close();
         }
     }
