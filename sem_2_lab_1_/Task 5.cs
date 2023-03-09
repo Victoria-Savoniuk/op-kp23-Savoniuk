@@ -47,6 +47,18 @@ namespace Labs
                     lenght++;
                 }
             }
+
+           sr.BaseStream.Seek(0, SeekOrigin.Begin);
+
+            // Масив для зберігання унікальних слів
+            string[] words = new string[lenght];
+            int index_words = 0;
+
+            // Масив для зберігання лічильників кількості зустрічей слів
+            int[] counts = new int[lenght];
+            int index_counts = 0;
+
+            string word = "";
             sr.Close();
         }
     }
