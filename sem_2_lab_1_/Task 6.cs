@@ -53,8 +53,22 @@ namespace Labs
             }
             br.Close();
 
+            int n = 0;
             BinaryWriter bw1 = new BinaryWriter(new FileStream(outputFilePath, FileMode.Create));
-
+            for (int i = 2; i < length; i += 3)
+            {
+                if (Convert.ToInt32(Mark[i]) > 95)
+                {
+                    bw1.Write(Mark[i - 2] + ";" + Mark[i - 1] + ";" + Mark[i]);
+                    Console.WriteLine(Mark[i - 2] + " " + Mark[i - 1] + " " + Mark[i]);
+                    n++;
+                }
+            }
+            if(n == 0)
+            {
+                bw1.Write("There are no students with a score above 95");
+                Console.WriteLine("There are no students with a score above 95");
+            }
             bw1.Close();
         }
         static void Split(string line, string[] Mark, int index)
