@@ -33,5 +33,13 @@ namespace Vessel
     }
     public class Submarine : Vessel
     {
+        public override void PrepareToMovement()
+        {
+            Console.WriteLine("Підготовка підводного човна до руху");
+        }
+        public override void Move()
+        {
+            Console.WriteLine("Підводний човен пірнає");
+        }
     }
 }
