@@ -31,11 +31,29 @@ namespace Vessel
     }
     public interface IVessel
     {
+        void PrepareToMovement();
+        void Move();
     }
     public class SailingVessel : IVessel
     {
+        public void PrepareToMovement()
+        {
+            Console.WriteLine("Підготовка парусника до руху");
+        }
+        public void Move()
+        {
+            Console.WriteLine("Парусник пливе");
+        }
     }
     public class Submarine : IVessel
     {
+        public void PrepareToMovement()
+        {
+            Console.WriteLine("Підготовка підводного човна до руху");
+        }
+        public void Move()
+        {
+            Console.WriteLine("Підводний човен пірнає");
+        }
     }
 }
