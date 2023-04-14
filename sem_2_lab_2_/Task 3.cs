@@ -34,19 +34,37 @@ namespace Vector
          */
         public static void Main(string[] args)
         {
-            int v1_Length = 0;
+            Console.WriteLine("Enter the length of vector 1: ");
+            int v1_Length = Convert.ToInt32(Console.ReadLine());
+            while(v1_Length <= 0)
+            {
+                Console.WriteLine("Vector length must be greater than 0. Try again");
+                Console.WriteLine("Enter the length of vector 1: ");
+                v1_Length = Convert.ToInt32(Console.ReadLine());
+            }
             int[] vector1 = new int[v1_Length];
+            Console.WriteLine("Enter the elements of vector 1: ");
             for (int i = 0; i < v1_Length; i++)
             {
-                vector1[i] = 0;
+                vector1[i] = Convert.ToInt32(Console.ReadLine());
             }
+            Console.WriteLine();
 
-            int v2_Length = 0;
+            Console.WriteLine("Enter the length of vector 2:  ");
+            int v2_Length = Convert.ToInt32(Console.ReadLine());
+            while (v2_Length <= 0)
+            {
+                Console.WriteLine("Vector length must be greater than 0. Try again");
+                Console.WriteLine("Enter the length of vector 2: ");
+                v2_Length = Convert.ToInt32(Console.ReadLine());
+            }
             int[] vector2 = new int[v2_Length];
+            Console.WriteLine("Enter the elements of vector 2: ");
             for (int i = 0; i < v2_Length; i++)
             {
-                vector2[i] = 0;
+                vector2[i] = Convert.ToInt32(Console.ReadLine());
             }
+            Console.WriteLine();
 
             Vector v1 = new Vector(vector1);
             Vector v2 = new Vector(vector2);
