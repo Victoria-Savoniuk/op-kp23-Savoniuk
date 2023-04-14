@@ -5,6 +5,25 @@ namespace Vessel
     {
         public static void Main(string[] args)
         {
+        /*Test cases:
+         *    Case 1:
+         *  Input:
+         *  num = 0;
+         *  Output:
+         *  Такого номера судна немає. Повторіть спробу.
+         *      Case 2:
+         *  Input:
+         *  num = 1;
+         *  Output:
+         *  Підготовка парусника до руху
+         *  Парусник пливе
+         *      Case 3:
+         *  Input:
+         *  num = 2;
+         *  Output:
+         *  Підготовка підводного човна до руху
+         *  Підводний човен пірнає
+         */
             Console.WriteLine("------------------------------");
             Console.WriteLine("{0,-15}{1,-20}","№ судна","Вид судна");
             Console.WriteLine("{0,-15}{1,-20}","1","Парусник");
