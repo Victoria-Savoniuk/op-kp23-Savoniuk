@@ -67,6 +67,20 @@ namespace Vector
         public static int operator +(Vector v1, Vector v2)
         {
             int result = 0;
+            for (int i = 0; i < v1._elements.Length; i++)
+            {
+                if (v1._elements[i] < 0)
+                {
+                    result += v1._elements[i];
+                }
+            }
+            for (int i = 0; i < v2._elements.Length; i++)
+            {
+                if (v2._elements[i] < 0)
+                {
+                    result += v2._elements[i];
+                }
+            }
             return result;
         }
         public static int operator *(Vector v1, Vector v2)
