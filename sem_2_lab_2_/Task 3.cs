@@ -3,6 +3,35 @@ namespace Vector
 {
     public class Program
     {
+        /*    Test cases:
+         *      Case 1:
+         *    Input:
+         *    v1_Length = -1;
+         *    Output:
+         *    Vector length must be greater than 0. Try again
+         *      Case 2:
+         *    Input:
+         *    v1_Length = 1;
+         *    Enter the elements of vector 1:
+         *    1
+         *    v2_Length = 0;
+         *    Output:
+         *    Vector length must be greater than 0. Try again
+         *      Case 3:
+         *    Input:
+         *    v1_Length = 1;
+         *    Enter the elements of vector 1:
+         *    1
+         *    v2_Length = 3;
+         *    Enter the length of vector 2: 
+         *    -1
+         *    0
+         *    2
+         *    Output:
+         *    Sum of negative elements: -1
+         *    Product of even elements: -2
+         *    Number of elements equal to zero: 1
+         */
         public static void Main(string[] args)
         {
             int v1_Length = 0;
