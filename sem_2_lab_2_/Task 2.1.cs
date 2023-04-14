@@ -39,8 +39,38 @@ namespace Salary
          * Разом     ...                 75000               3500                71500
          */
             int num = 0;
+
+            Console.WriteLine("Введіть кілкість співробітників підприємства:");
+            num = Convert.ToInt32(Console.ReadLine());
+            while (num < 0)
+            {
+                Console.WriteLine("Кількість співробітників не може бути від'ємним числом. Повторіть спробу.");
+                Console.WriteLine("Введіть кілкість співробітників підприємства:");
+                num = Convert.ToInt32(Console.ReadLine());
+            }
+
             Employee[] employees = new Employee[num];
+
+            for (int i = 0; i < num; i++)
+            {
+                Console.WriteLine();
+
+                Console.WriteLine($"Співробітник №{i + 1}:");
+                Console.WriteLine($"Введіть прізвище співробітника:");
+                string LastName = Console.ReadLine();
+
+                Console.WriteLine($"Введіть зарплату співробітника:");
+                int Salary = Convert.ToInt32(Console.ReadLine());
+
+
+                Console.WriteLine($"Введіть утримання із зарплати співробітника:");
+                int Withheld = Convert.ToInt32(Console.ReadLine());
+                employees[i] = new Employee(LastName, Salary, Withheld);
+            }
+            Console.WriteLine();
+
             SalaryReport report = new SalaryReport(employees);
+            report.PrintReport();
         }
     }
     class Employee
