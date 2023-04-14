@@ -22,6 +22,14 @@ namespace Vessel
     }
     public class SailingVessel : Vessel
     {
+        public override void PrepareToMovement()
+        {
+            Console.WriteLine("Підготовка парусника до руху");
+        }
+        public override void Move()
+        {
+            Console.WriteLine("Парусник пливе");
+        }
     }
     public class Submarine : Vessel
     {
