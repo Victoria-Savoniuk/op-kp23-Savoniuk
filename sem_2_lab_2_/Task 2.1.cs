@@ -45,16 +45,20 @@ namespace Salary
     }
     class Employee
     {
-        public string _lastName;
-        public double _salary;
-        public double _withheld;
-        public double _given;
+        public string _lastName { get; set; }
+        public double _salary { get; set; }
+        public double _withheld { get; set; }
+        public double _given { get; set; }
         public Employee(string lastName, double salary, double withheld)
         {
             _lastName = lastName;
             _salary = salary;
             _withheld = withheld;
             _given = salary - withheld;
+        }
+        public void PrintInfo()
+        {
+            Console.WriteLine("{0,-5}{1,-20}{2,-20}{3,-20}{4,-15}", " ", _lastName, _salary, _withheld, _given);
         }
     }
 
@@ -64,6 +68,28 @@ namespace Salary
         public SalaryReport(Employee[] employees)
         {
             _employees = employees;
+        }
+        public void PrintReport()
+        {
+            Console.WriteLine("{0,-10}{1,-20}{2,-20}{3,-20}{4,-20}", "№з/п", "Прізвище", "Зарплата, грн", "Утримано, грн", "Видано, грн");
+            Console.WriteLine("-----------------------------------------------------------------------------------");
+
+            double totalSalary = 0;
+            double totalWithheld = 0;
+            double totalGiven = 0;
+
+            for (int i = 0; i < _employees.Length; i++)
+            {
+                Console.Write("{0,-5}", i + 1);
+                _employees[i].PrintInfo();
+
+                totalSalary += _employees[i]._salary;
+                totalWithheld += _employees[i]._withheld;
+                totalGiven += _employees[i]._given;
+            }
+
+            Console.WriteLine("-----------------------------------------------------------------------------------");
+            Console.WriteLine("{0,-10}{1,-20}{2,-20}{3,-20}{4,-20}", "Разом", "...", totalSalary, totalWithheld, totalGiven);
         }
     }
 }
