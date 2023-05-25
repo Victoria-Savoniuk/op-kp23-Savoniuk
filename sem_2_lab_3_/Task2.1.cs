@@ -18,12 +18,19 @@ namespace Lab3
         // construct an empty randomized queue
         public RandomizedQueue()
         {
- 
+            head = null;
+            tail = null;
+            size = 0;
+            current = head;
         }
 
         // is the randomized queue empty?
         public bool IsEmpty()
         {
+            if (Size() != 0)
+            {
+                return false;
+            }
             return true;
         }
 
@@ -36,22 +43,74 @@ namespace Lab3
         // add the item
         public void Enqueue(Item item)
         {
-           
+           Node newNode = new Node();
+            newNode.value = item;
+
+            if (IsEmpty())
+            {
+                head = newNode;
+                tail = newNode;
+            }
+            else
+            {
+                newNode.prev = tail;
+                tail.next = newNode;
+                tail = newNode;
+            }
+
+            size++;
+            current = head;
         }
 
         // remove and return a random item
         public Item Dequeue()
         {
+            if (IsEmpty())
+                throw new InvalidOperationException("RandomizedQueue is empty.");
+
             int randomIndex = new Random().Next(size);
             Node randomValue = head;
+            while (randomIndex > 0)
+            {
+                randomValue = randomValue.next;
+                randomIndex--;
+            }
+
+            if (randomValue.prev != null)
+            {
+                randomValue.prev.next = randomValue.next;
+            }
+            else
+            {
+                head = randomValue.next;
+            }
+
+            if (randomValue.next != null)
+            {
+                randomValue.next.prev = randomValue.prev;
+            }
+            else
+            {
+                tail = randomValue.prev;
+            }
+            size--;
+            current = head;
             return randomValue.value;
         }
 
         // return a random item (but do not remove it)
         public Item Sample()
         {
+            if (IsEmpty())
+                throw new InvalidOperationException("RandomizedQueue is empty.");
+
             int randomIndex = new Random().Next(size);
             Node randomValue = head;
+            while (randomIndex > 0)
+            {
+                randomValue = randomValue.next;
+                randomIndex--;
+            }
             return randomValue.value;
         }
 
