@@ -329,6 +329,7 @@ namespace Lab3
                             while (true)
                             {
                                 Console.Clear();
+				UnitTest();
                                 Console.WriteLine("To go back press Esc");
                                 int esc = ' ';
                                 esc = (int)Console.ReadKey().Key;
@@ -360,6 +361,104 @@ namespace Lab3
                     }
                 }
             }
+	static void UnitTest()
+        {
+            Deque<int> dq = new Deque<int>();
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("Deque items: ");
+            showIterator(dq);
+
+            if (dq.IsEmpty() == true)
+            {
+                Console.WriteLine("The empty property showed true");
+
+            }
+            else
+            {
+                Console.WriteLine("Error!");
+            }
+            if (dq.Size() == 0)
+            {
+                Console.WriteLine("Size = " + dq.Size());
+                Console.WriteLine("The size was shown correctly!");
+            }
+            else
+            {
+                Console.WriteLine("Error!");
+            }
+            Console.WriteLine("----------------------------");
+            Console.WriteLine();
+            Console.WriteLine("----------------------------");
+            
+            dq.AddFirst(2);
+            dq.AddFirst(1);
+            dq.AddFirst(3);
+            dq.AddLast(4);
+            dq.AddLast(5);
+            dq.AddLast(6);
+            Console.WriteLine("Deque items: ");
+            showIterator(dq);
+            Console.WriteLine("----------------------------");
+            /// Removed First Item
+            if (dq.RemoveFirst() == 3)
+            {
+                Console.WriteLine("The first item has been removed");
+            }
+            else
+            {
+                Console.WriteLine("Error!");
+            }
+            Console.WriteLine("Deque items: ");
+            showIterator(dq);
+            Console.WriteLine("----------------------------");
+            Console.WriteLine();
+            Console.WriteLine("----------------------------");
+            /// Removed Last Item
+            if (dq.RemoveLast() == 6)
+            {
+                Console.WriteLine("Last item removed!");
+            }
+            else
+            {
+                Console.WriteLine("Error!");
+            }
+            Console.WriteLine("Deque items: ");
+            showIterator(dq);
+            Console.WriteLine("----------------------------");
+            Console.WriteLine();
+            Console.WriteLine("----------------------------");
+            if (dq.Size() == 4)
+            {
+                Console.WriteLine("Size = " + dq.Size());
+                Console.WriteLine("The size was shown correctly!");
+            }
+            else
+            {
+                Console.WriteLine("Error!");
+            }
+            Console.WriteLine();
+
+            if (dq.IsEmpty() == false)
+            {
+                Console.WriteLine("The empty property showed false");
+            }
+            else
+            {
+                Console.WriteLine("Error!");
+            }
+            Console.WriteLine("----------------------------");
+            Console.WriteLine();
+            /* The strings were shown in such order:
+             * 1
+             * 2
+             * 4
+             * 5
+             */
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("Testing iterator:");
+            showIterator(dq);
+            Console.WriteLine("----------------------------");
+        }
         }
     }
 }
