@@ -44,6 +44,7 @@ namespace Lab3
                 newArray[i] = array[i];
             }
             array = newArray;
+            capacity = capacity* 2;
             head = 0;
             tail = size - 1;
         }
