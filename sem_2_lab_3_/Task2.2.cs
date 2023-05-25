@@ -319,6 +319,88 @@ namespace Lab3
                     }
                 }
             }
+            static void UnitTest()
+            {
+                RandomizedQueue<int> rq = new RandomizedQueue<int>();
+                Console.WriteLine("----------------------------");
+                Console.WriteLine("Randomized Queue items: ");
+                showIterator(rq);
+
+                if (rq.IsEmpty() == true)
+                {
+                    Console.WriteLine("The empty property showed true");
+                }
+                else
+                {
+                    Console.WriteLine("Error!");
+                }
+                if (rq.Size() == 0)
+                {
+                    Console.WriteLine("Size = " + rq.Size());
+                    Console.WriteLine("The size was shown correctly!");
+                }
+                else
+                {
+                    Console.WriteLine("Error!");
+                }
+                Console.WriteLine("----------------------------");
+                Console.WriteLine();
+                Console.WriteLine("----------------------------");
+
+                rq.Enqueue(1);
+                rq.Enqueue(2);
+                rq.Enqueue(3);
+                rq.Enqueue(4);
+                rq.Enqueue(5);
+                rq.Enqueue(6);
+                Console.WriteLine("Randomized Queue items: ");
+                showIterator(rq);
+
+                Console.WriteLine("----------------------------");
+                // remove and return a random item
+                int num = rq.Dequeue();
+                Console.WriteLine("A random element has been removed: " + num);
+                Console.WriteLine("Randomized Queue items: ");
+                showIterator(rq);
+                Console.WriteLine("----------------------------");
+                Console.WriteLine();
+
+                Console.WriteLine("----------------------------");
+                // return a random item (but do not remove it)
+                int num2 = rq.Sample();
+                Console.WriteLine("Random element: " + num2);
+                Console.WriteLine("Randomized Queue items: ");
+                showIterator(rq);
+                Console.WriteLine("----------------------------");
+                Console.WriteLine();
+
+                Console.WriteLine("----------------------------");
+                if (rq.Size() == 5)
+                {
+                    Console.WriteLine("Size = " + rq.Size());
+                    Console.WriteLine("The size was shown correctly!");
+                }
+                else
+                {
+                    Console.WriteLine("Error!");
+                }
+                Console.WriteLine();
+
+                if (rq.IsEmpty() == false)
+                {
+                    Console.WriteLine("The empty property showed false");
+                }
+                else
+                {
+                    Console.WriteLine("Error!");
+                }
+                Console.WriteLine("----------------------------");
+                Console.WriteLine();
+                Console.WriteLine("----------------------------");
+                Console.WriteLine("Testing iterator:");
+                showIterator(rq);
+                Console.WriteLine("----------------------------");
+            }
             
         }
     }
