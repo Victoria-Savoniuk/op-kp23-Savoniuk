@@ -190,7 +190,184 @@ namespace Lab3
     {
         public static void Main(string[] args)
         {
+             public static void Main(string[] args)
+        {
             Deque<int> deque = new Deque<int>();
+            IIterator<int> it = deque;
+
+            string[] options = { "Add an element to the head of the deque", "Add an element to the tail of the deque",
+            "Remove an element from the head of the deque", "Remove an element from the tail of the deque", "Show deque", "Unit Test" };
+            int selectedIndex = 0;
+
+            while (true)
+            {
+                Console.Clear();
+                Console.WriteLine("Use the arrow keys to select a command:");
+                for (int i = 0; i < options.Length; i++)
+                {
+                    if (i == selectedIndex)
+                    {
+                        Console.Write("> ");
+                    }
+                    else
+                    {
+                        Console.Write("  ");
+                    }
+                    Console.WriteLine(options[i]);
+                }
+
+                ConsoleKeyInfo keyInfo = Console.ReadKey();
+                switch (keyInfo.Key)
+                {
+                    case ConsoleKey.UpArrow:
+                        selectedIndex--;
+                        if (selectedIndex < 0)
+                        {
+                            selectedIndex = options.Length - 1;
+                        }
+                        break;
+                    case ConsoleKey.DownArrow:
+                        selectedIndex++;
+                        if (selectedIndex >= options.Length)
+                        {
+                            selectedIndex = 0;
+                        }
+                        break;
+                    case ConsoleKey.Enter:
+                        Console.Clear();
+                        if (options[selectedIndex] == "Add an element to the head of the deque")
+                        {
+                            while (true)
+                            {
+                                Console.WriteLine("The size of the deque: " + deque.Size());
+                                Console.WriteLine("Deque items: ");
+                                showIterator(deque);
+                                Console.WriteLine("Enter the element you want to add:");
+                                int item = Convert.ToInt32(Console.ReadLine());
+                                deque.AddFirst(item);
+                                Console.WriteLine("Size of deque after addition: " + deque.Size());
+                                Console.WriteLine("Deque items after adding: ");
+                                showIterator(deque);
+                                Console.WriteLine("To go back press Esc");
+                                int esc = ' ';
+                                esc = (int)Console.ReadKey().Key;
+                                while (esc != 27)
+                                {
+                                    esc = (int)Console.ReadKey().Key;
+                                }
+                                Console.Clear();
+                                break;
+                            }
+                        }
+                        else if (options[selectedIndex] == "Add an element to the tail of the deque")
+                        {
+                            while (true)
+                            {
+                                Console.WriteLine("The size of the deque: " + deque.Size());
+                                Console.WriteLine("Deque items: ");
+                                showIterator(deque);
+                                Console.WriteLine("Enter the element you want to add:");
+                                int item = Convert.ToInt32(Console.ReadLine());
+                                deque.AddLast(item);
+                                Console.WriteLine("Size of deque after addition: " + deque.Size());
+                                Console.WriteLine("Deque items after adding: ");
+                                showIterator(deque);
+                                Console.WriteLine("To go back press Esc");
+                                int esc = ' ';
+                                esc = (int)Console.ReadKey().Key;
+                                while (esc != 27)
+                                {
+                                    esc = (int)Console.ReadKey().Key;
+                                }
+                                Console.Clear();
+                                break;
+                            }
+                        }
+                        else if (options[selectedIndex] == "Remove an element from the head of the deque")
+                        {
+                            while (true)
+                            {
+                                Console.Clear();
+                                Console.WriteLine("Deque size to delete: " + deque.Size());
+                                Console.WriteLine("Deque items: ");
+                                showIterator(deque);
+                                deque.RemoveFirst();
+                                Console.WriteLine("Size of deque after deletion: " + deque.Size());
+                                Console.WriteLine("Deque items after removal: ");
+                                showIterator(deque);
+                                Console.WriteLine("To go back press Esc");
+                                int esc = ' ';
+                                esc = (int)Console.ReadKey().Key;
+                                while (esc != 27)
+                                {
+                                    esc = (int)Console.ReadKey().Key;
+                                }
+                                Console.Clear();
+                                break;
+                            }
+                        }
+                        else if (options[selectedIndex] == "Remove an element from the tail of the deque")
+                        {
+                            while (true)
+                            {
+                                Console.Clear();
+                                Console.WriteLine("Deque size to delete: " + deque.Size());
+                                Console.WriteLine("Deque items: ");
+                                showIterator(deque);
+                                deque.RemoveLast();
+                                Console.WriteLine("Size of deque after deletion: " + deque.Size());
+                                Console.WriteLine("Deque items after removal: ");
+                                showIterator(deque);
+                                Console.WriteLine("To go back press Esc");
+                                int esc = ' ';
+                                esc = (int)Console.ReadKey().Key;
+                                while (esc != 27)
+                                {
+                                    esc = (int)Console.ReadKey().Key;
+                                }
+                                Console.Clear();
+                                break;
+                            }
+                        }
+                        else if (options[selectedIndex] == "Show deque")
+                        {
+                            while (true)
+                            {
+                                Console.Clear();
+                                Console.WriteLine("The size of the deque: " + deque.Size());
+                                Console.WriteLine("Deque items: ");
+                                showIterator(deque);
+                                Console.WriteLine("To go back press Esc");
+                                int esc = ' ';
+                                esc = (int)Console.ReadKey().Key;
+                                while (esc != 27)
+                                {
+                                    esc = (int)Console.ReadKey().Key;
+                                }
+                                Console.Clear();
+                                break;
+                            }
+                        }
+                        else if (options[selectedIndex] == "Unit Test")
+                        {
+                            while (true)
+                            {
+                                Console.Clear();
+                                UnitTest();
+                                Console.WriteLine("To go back press Esc");
+                                int esc = ' ';
+                                esc = (int)Console.ReadKey().Key;
+                                while (esc != 27)
+                                {
+                                    esc = (int)Console.ReadKey().Key;
+                                }
+                                Console.Clear();
+                                break;
+                            }
+                        }
+                        break;
+                }
+            }
             
         }
     }
