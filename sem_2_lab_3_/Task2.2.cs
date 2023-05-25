@@ -13,12 +13,20 @@ namespace Lab3
         // Construct an empty randomized queue
         public RandomizedQueue()
         {
-            
+            capacity = 30;
+            array = new Item[capacity];
+            size = 0;
+            head = tail = -1;
+            current = head;
         }
 
         // Is the randomized queue empty?
         public bool IsEmpty()
         {
+            if (Size() != 0)
+            {
+                return false;
+            }
             return true;
         }
 
@@ -30,26 +38,70 @@ namespace Lab3
 
         private void Resize()
         {
-
+            Item[] newArray = new Item[capacity * 2];
+            for(int i = 0; i <= tail; i++)
+            {
+                newArray[i] = array[i];
+            }
+            array = newArray;
+            head = 0;
+            tail = size - 1;
         }
 
         // Add the item
         public void Enqueue(Item item)
         {
- 
+            if (item == null)
+            {
+                throw new ArgumentNullException("Item cannot be null.");
+            }
+
+            if (size == capacity)
+            {
+                Resize();
+            }
+
+            if (head == -1)
+            {
+                head = tail = 0;
+            }
+            else
+            {
+                tail = tail + 1;
+            }
+            array[tail] = item;
+            size++;
+            current = head;
         }
 
         // Remove and return a random item
         public Item Dequeue()
         {
+            if (IsEmpty())
+            {
+                throw new InvalidOperationException("Randomized queue is empty.");
+            }
+
             int randomIndex = new Random().Next(size);
             Item item = array[randomIndex];
+            for(int i = randomIndex; i < tail; i++)
+            {
+                array[i] = array[i+1];
+            }
+            tail = tail-1;
+            size--;
+            current = head;
             return item;
         }
 
         // Return a random item (but do not remove it)
         public Item Sample()
         {
+            if (IsEmpty())
+            {
+                throw new InvalidOperationException("Randomized queue is empty.");
+            }
+
             int randomIndex = new Random().Next(size);
             return array[randomIndex];
         }
