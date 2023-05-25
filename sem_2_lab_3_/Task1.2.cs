@@ -190,8 +190,6 @@ namespace Lab3
     {
         public static void Main(string[] args)
         {
-             public static void Main(string[] args)
-        {
             Deque<int> deque = new Deque<int>();
             IIterator<int> it = deque;
 
@@ -366,6 +364,23 @@ namespace Lab3
                             }
                         }
                         break;
+                }
+            }
+            static void showIterator(Deque<int> deque)
+            {
+                IIterator<int> it = deque.iterator();
+
+                if (deque.Size() == 0)
+                {
+                    Console.WriteLine();
+                }
+                else
+                {
+                    while (it.HasNext)
+                    {
+                        int num = it.MoveNext();
+                        Console.WriteLine(num);
+                    }
                 }
             }
             
