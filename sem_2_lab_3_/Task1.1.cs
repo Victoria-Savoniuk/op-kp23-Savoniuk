@@ -8,7 +8,6 @@ namespace Lab3
         private int size; 
         private Node current;
 
-        // Internal node class
         private class Node
         {
             public Item value;
@@ -16,16 +15,22 @@ namespace Lab3
             public Node next;
         }
 
-        // Construct an empty deque
         public Deque()
         {
-           
+           head = null;
+           tail = null;
+           size = 0;
+           current = head;
         }
 
         // Is the deque empty?
         public bool IsEmpty()
         {
-            return true;
+            if(Size() != 0)
+        {
+            return false;
+        }
+        return true;
         }
 
         // Return the number of items on the deque
@@ -37,27 +42,98 @@ namespace Lab3
         // Add the item to the front
         public void AddFirst(Item item)
         {
-           
+           if (item == null)
+            throw new ArgumentNullException("item = null");
+
+        Node newNode = new Node();
+        newNode.value = item;
+
+        if (IsEmpty())
+        {
+            head = newNode;
+            tail = newNode;
+        }
+        else
+        {
+            newNode.next = head;
+            head.prev = newNode;
+            head = newNode;
+        }
+        size++;
+        current = head;
         }
 
         // Add the item to the back
         public void AddLast(Item item)
         {
-           
+           if (item == null)
+            throw new ArgumentNullException("item = null");
+
+        Node newNode = new Node();
+        newNode.value = item;
+
+        if (IsEmpty())
+        {
+            head = newNode;
+            tail = newNode;
+        }
+        else
+        {
+            newNode.prev = tail;
+            tail.next = newNode;
+            tail = newNode;
+        }
+
+        size++;
+        current = head;
         }
 
         // Remove and return the item from the front
         public Item RemoveFirst()
         {
-            Item value = head.value;
-            return value;
+             if (IsEmpty())
+            throw new InvalidOperationException("Deque is empty");
+
+        Item value = head.value;
+
+        if (head == tail)
+        {
+            head = null;
+            tail = null;
+        }
+        else
+        {
+            head = head.next;
+            head.prev = null;
+        }
+
+        size--;
+        current = head;
+        return value;
         }
 
         // Remove and return the item from the back
         public Item RemoveLast()
         {
-            Item value = tail.value;
-            return value;
+            if (IsEmpty())
+            throw new InvalidOperationException("Deque is empty");
+
+        Item value = tail.value;
+
+        if (head == tail)
+        {
+            head = null;
+            tail = null;
+        }
+        else
+        {
+            tail = tail.prev;
+            tail.next = null;
+        }
+
+        size--;
+        current = head;
+        return value;
         }
         public IIterator<Item> iterator()
         {
@@ -70,6 +146,10 @@ namespace Lab3
         }
         public Item MoveNext()
         {
+            if (!HasNext)
+	{
+            throw new InvalidOperationException("No more items in the deque");
+	}
             Item value = current.value;
             current = current.next;
             return value;
