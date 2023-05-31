@@ -56,6 +56,7 @@ namespace Lab3
             else if (head == 0)
             {
                 Resize();
+                size --;
                 AddFirst(item);
             }
             else
@@ -87,6 +88,7 @@ namespace Lab3
             else if (tail == capacity)
             {
                 Resize();
+                size --;
                 AddLast(item);
             }
             else
@@ -146,17 +148,25 @@ namespace Lab3
         }
         private void Resize()
         {
-            Item[] newArray = new Item[capacity * 2];
-            int j = 0;
+            Item[] newArray;
+            if ((size * 100 /capacity) > 55)
+            {
+                newArray = new Item[capacity * 3];
+            }
+            else
+            {
+                newArray = new Item[capacity * 2];
+            }
+            int j = newArray.Length/2;
             for (int i = head; i <= tail; i++)
             {
-                newArray[i] = array[j];
+                newArray[j] = array[i];
                 j++;
             }
             array = newArray;
-            capacity = capacity * 2;
-            head = 0;
-            tail = size - 1;
+            head = newArray.Length / 2;
+            tail = j-1;
+            capacity = newArray.Length;
         }
         public IIterator<Item> iterator()
         {
