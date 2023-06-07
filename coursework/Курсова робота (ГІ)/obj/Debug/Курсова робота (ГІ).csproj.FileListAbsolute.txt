@@ -1,0 +1,17 @@
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\bin\Debug\Курсова робота (ГІ).exe.config
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\bin\Debug\Курсова робота (ГІ).exe
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\bin\Debug\Курсова робота (ГІ).pdb
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Курсова робота (ГІ).csproj.AssemblyReference.cache
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Курсова робота (ГІ).csproj.SuggestedBindingRedirects.cache
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Курсова_робота__ГІ_.Properties.Resources.resources
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Курсова_робота__ГІ_.StartPage.resources
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Курсова робота (ГІ).csproj.GenerateResource.cache
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Курсова робота (ГІ).csproj.CoreCompileInputs.cache
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Курсова робота (ГІ).exe
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Курсова робота (ГІ).pdb
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Курсова_робота__ГІ_.EmployeePage.resources
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Курсова_робота__ГІ_.PasswordPage.resources
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Курсова_робота__ГІ_.MyMessageBox.resources
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Курсова_робота__ГІ_.BuyerPage.resources
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Курсова_робота__ГІ_.StartBuyerPage.resources
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Курсова_робота__ГІ_.AddProductPage.resources
