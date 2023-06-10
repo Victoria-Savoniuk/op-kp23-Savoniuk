@@ -45,7 +45,7 @@ namespace lab4
 
         private int GetHash(KItem key)
         {
-            return 0;
+            return Math.Abs(key.GetHashCode() % table.Length);
         }
 
         public void Add(KItem key, VItem value)
