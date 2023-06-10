@@ -159,7 +159,34 @@ namespace lab4
 
         public void PrintContents()
         {
- 
+            Console.WriteLine("Словник:");
+            for (int index = 0; index < capacity; index++)
+            {
+                Console.WriteLine($"Індекс {index}:");
+                Node node = table[index];
+                if (node == null)
+                {
+                    Console.WriteLine("");
+                }
+                else
+                {
+                    while (node != null)
+                    {
+                        Console.WriteLine($"Слово: {node.Key}");
+
+                        node = node.Next;
+                        if (node != null)
+                        {
+                            Console.WriteLine("");
+                            Console.WriteLine("_________________________");
+                        }
+                        else
+                        {
+                            Console.WriteLine();
+                        }
+                    }
+                }
+            }
         }
     }
 }
