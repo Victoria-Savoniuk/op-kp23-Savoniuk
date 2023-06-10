@@ -113,6 +113,19 @@ namespace lab4
 
         public VItem Get(KItem key)
         {
+            int index = GetHash(key);
+            Node node = table[index];
+
+            while (node != null)
+            {
+                if (node.Key.Equals(key))
+                {
+                    Console.WriteLine(node.Key);
+                    return node.Value;
+                }
+                node = node.Next;
+            }
+            Console.WriteLine("Такого слова немає в словнику");
             return default!;
         }
 
