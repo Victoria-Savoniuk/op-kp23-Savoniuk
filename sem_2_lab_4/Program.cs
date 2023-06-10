@@ -50,7 +50,34 @@ namespace lab4
 
         public void Add(KItem key, VItem value)
         {
-            
+            int index = GetHash(key);
+            if (table[index] == null)
+            {
+                table[index] = new Node(key, value);
+                sizeTable++;
+            }
+            else
+            {
+                Node node = table[index];
+                while (node.Next != null)
+                {
+                    if (node.Key.Equals(key))
+                    {
+                        Console.WriteLine("Таке слово вже існує в словнику");
+                        return;
+                    }
+                    node = node.Next;
+                }
+                if (node.Key.Equals(key))
+                {
+                    Console.WriteLine("Таке слово вже існує в словнику");
+                }
+                else
+                {
+                    node.Next = new Node(key, value);
+                    sizeTable++;
+                }
+            }
         }
 
         public void Remove(KItem key)
