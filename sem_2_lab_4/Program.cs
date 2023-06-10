@@ -31,12 +31,16 @@ namespace lab4
 
         public HashTable()
         {
-
+            capacity = 30;
+            table = new Node[capacity];
+            sizeTable = 0;
         }
 
         public HashTable(int intialCapacity)
         {
-
+            capacity = intialCapacity;
+            table = new Node[capacity];
+            sizeTable = 0;
         }
 
         private int GetHash(KItem key)
