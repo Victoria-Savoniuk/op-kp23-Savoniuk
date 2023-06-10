@@ -7,7 +7,183 @@ namespace lab4
     {
         public static void Main(string[] args)
         {
-            HashTable<string, bool> table = new HashTable<string, bool>();
+            int size = 0;
+            bool flag = true;
+            while (flag)
+            {
+                Console.WriteLine("Бажаєте ввести розмір геш-таблиці?");
+                Console.WriteLine("1. Так");
+                Console.WriteLine("2. Ні");
+
+                Console.Write("Виберіть опцію: ");
+                string option = Console.ReadLine();
+
+                Console.WriteLine();
+
+                switch (option)
+                {
+                    case "1":
+                        Console.Clear();
+
+                        Console.WriteLine("Введіть розмір геш-таблиці: ");
+                        size = Convert.ToInt32(Console.ReadLine());
+                        while (size <= 0)
+                        {
+                            Console.WriteLine("Розмір геш-таблиці має бути більша за 0! Повторіть спробу!");
+                            Console.WriteLine("Введіть розмір геш-таблиці: ");
+                            size = Convert.ToInt32(Console.ReadLine());
+                        }
+                        flag = false;
+                        break;
+                    case "2":
+                        size = 0;
+                        flag = false;
+                        break;
+                    default:
+                        Console.WriteLine("Невірна опція. Спробуйте ще раз.");
+                        break;
+                }
+            }
+
+            HashTable<string, bool> table;
+
+            if (size == 0)
+            {
+                table = new HashTable<string, bool>();
+            }
+            else
+            {
+                table = new HashTable<string, bool>(size);
+            }
+
+            while (true)
+            {
+                Console.WriteLine("1. Додати слово");
+                Console.WriteLine("2. Видалити слово");
+                Console.WriteLine("3. Вивести слово");
+                Console.WriteLine("4. Перевірити чи існує дане слово в словнику");
+                Console.WriteLine("5. Вивести розмір словника");
+                Console.WriteLine("6. Очистити словник");
+                Console.WriteLine("7. Вивести вміст словника");
+                Console.WriteLine("8. Вийти");
+
+                Console.Write("Виберіть опцію: ");
+                string option = Console.ReadLine();
+                int esc = ' ';
+
+                Console.WriteLine();
+
+                switch (option)
+                {
+                    case "1":
+                        bool go = true;
+                        while (go)
+                        {
+                            Console.Clear();
+                            string key;
+                            Console.WriteLine("Введіть слово");
+                            key = Console.ReadLine();
+                            Console.WriteLine();
+                            table.Add(key, true);
+                            Console.WriteLine("Якщо хочете вийти натисніть Esc, якщо ні - Enter");
+                            esc = (int)Console.ReadKey().Key;
+                            if (esc == 27)
+                            {
+                                Console.Clear();
+                                go = false;
+                            }
+                            Console.Clear();
+                        }
+                        break;
+                    case "2":
+                        Console.Clear();
+                        Console.WriteLine("Введіть слово");
+                        Console.WriteLine();
+                        table.Remove(Console.ReadLine());
+                        Console.WriteLine("Якщо хочете вийти натисніть Esc");
+                        esc = (int)Console.ReadKey().Key;
+                        while (esc != 27)
+                        {
+                            esc = (int)Console.ReadKey().Key;
+                        }
+                        Console.Clear();
+                        break;
+                    case "3":
+                        Console.Clear();
+                        Console.WriteLine("Введіть слово");
+                        bool word = table.Get(Console.ReadLine());
+                        Console.WriteLine();
+                        Console.WriteLine(word);
+                        Console.WriteLine("Якщо хочете вийти натисніть Esc");
+                        esc = (int)Console.ReadKey().Key;
+                        while (esc != 27)
+                        {
+                            esc = (int)Console.ReadKey().Key;
+                        }
+                        Console.Clear();
+                        break;
+                    case "4":
+                        Console.Clear();
+                        Console.WriteLine("Введіть слово");
+                        Console.WriteLine();
+                        if (table.Contains(Console.ReadLine()))
+                        {
+                            Console.WriteLine("OK");
+                        }
+                        else
+                        {
+                            Console.WriteLine("WrongSpelling");
+                        }
+                        Console.WriteLine("Якщо хочете вийти натисніть Esc");
+                        esc = (int)Console.ReadKey().Key;
+                        while (esc != 27)
+                        {
+                            esc = (int)Console.ReadKey().Key;
+                        }
+                        Console.Clear();
+                        break;
+                    case "5":
+                        Console.Clear();
+                        Console.WriteLine(table.size());
+                        Console.WriteLine("Якщо хочете вийти натисніть Esc");
+                        esc = (int)Console.ReadKey().Key;
+                        while (esc != 27)
+                        {
+                            esc = (int)Console.ReadKey().Key;
+                        }
+                        Console.Clear();
+                        break;
+                    case "6":
+                        Console.Clear();
+                        table.clear();
+                        Console.WriteLine("Якщо хочете вийти натисніть Esc");
+                        esc = (int)Console.ReadKey().Key;
+                        while (esc != 27)
+                        {
+                            esc = (int)Console.ReadKey().Key;
+                        }
+                        Console.Clear();
+                        break;
+                    case "7":
+                        Console.Clear();
+                        table.PrintContents();
+                        Console.WriteLine("Якщо хочете вийти натисніть Esc");
+                        esc = (int)Console.ReadKey().Key;
+                        while (esc != 27)
+                        {
+                            esc = (int)Console.ReadKey().Key;
+                        }
+                        Console.Clear();
+                        break;
+                    case "8":
+                        return;
+                    default:
+                        Console.WriteLine("Невірна опція. Спробуйте ще раз.");
+                        break;
+                }
+
+                Console.WriteLine();
+            }
         }
     }
     public class HashTable<KItem, VItem>
