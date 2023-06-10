@@ -17,10 +17,15 @@ namespace lab4
         private Node[] table;
         private class Node
         {
+            public KItem Key { get; }
+            public VItem Value { get; }
+            public Node Next { get; set; }
 
             public Node(KItem key, VItem value)
             {
-              
+                Key = key;
+                Value = value;
+                Next = null;
             }
         }
 
