@@ -83,6 +83,32 @@ namespace lab4
         public void Remove(KItem key)
         {
             
+            int index = GetHash(key);
+            Node node = table[index];
+            Node prev = null;
+            
+            while (node != null)
+            {
+                if (node.Key.Equals(key))
+                {
+                    if (prev != null)
+                    {
+                        prev.Next = node.Next;
+                        sizeTable--;
+                        Console.WriteLine($"Слово {key} видалено із словника");
+                    }
+                    else
+                    {
+                        table[index] = node.Next;
+                        sizeTable--;
+                        Console.WriteLine($"Слово {key} видалено із словника");
+                    }
+                    return;
+                }
+                prev = node;
+                node = node.Next;
+            }
+            Console.WriteLine("Такого слова немає в словнику");
         }
 
         public VItem Get(KItem key)
