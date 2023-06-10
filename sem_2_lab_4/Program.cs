@@ -131,6 +131,17 @@ namespace lab4
 
         public bool Contains(KItem key)
         {
+            int index = GetHash(key);
+            Node node = table[index];
+
+            while (node != null)
+            {
+                if (node.Key.Equals(key))
+                {
+                    return true;
+                }
+                node = node.Next;
+            }
             return false;
         }
 
