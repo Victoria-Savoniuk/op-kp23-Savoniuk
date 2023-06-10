@@ -147,7 +147,9 @@ namespace lab4
 
         public void clear()
         {
-
+            table = new Node[capacity];
+            sizeTable = 0;
+            Console.WriteLine("Словник очищено");
         }
 
         public int size()
