@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Coursework.Accessory">
+    <Position X="9" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Accessory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.unitPage" Collapsed="true">
+    <Position X="35.75" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAACKACCAEBABMACEACACBEAggAGBgQAgAAAAAAQ=</HashCode>
+      <FileName>AddAccessoriesPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.AddClothesPage" Collapsed="true">
+    <Position X="30.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQhAACIBCgA0BARMEKEAAACJAAggAUBgQAigBAAAqQ=</HashCode>
+      <FileName>AddClothesPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.AddFoodPage" Collapsed="true">
+    <Position X="32.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgYBAAAIACAAEBABMACEACACBEkggA2BgQAgAAAAAAQ=</HashCode>
+      <FileName>AddFoodPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.AddFootwearPage" Collapsed="true">
+    <Position X="34" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBACCIACCAEBABMACEAACzhwMggDEBgQAgAAAAACQ=</HashCode>
+      <FileName>AddFootwearPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.AddOldProductPage" Collapsed="true">
+    <Position X="35.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQgAAAAACAAABEAMCCAACDC9EkAgACDwYAgAABAAAQ=</HashCode>
+      <FileName>AddOldProductPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.AddProductPage" Collapsed="true">
+    <Position X="37.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQQAEQAACAIABAAIACEAAACBIAACwAAAQAAAAAAAAQ=</HashCode>
+      <FileName>AddProductPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Buyer">
+    <Position X="9" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAEAAAAAAQAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Buyer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.BuyerPage" Collapsed="true">
+    <Position X="30.5" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAQABAIIACEAgACBCAAAAABAQAABAAAAJQ=</HashCode>
+      <FileName>BuyerPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.CheckPage" Collapsed="true">
+    <Position X="32.25" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAQABAAIACAAAACBBAAAkIAAEBQAAAAAIQ=</HashCode>
+      <FileName>CheckPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Clothing">
+    <Position X="29.5" Y="4.75" Width="1.5" />
+    <InheritanceLine Type="Coursework.Product" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="22.625" Y="2.824" />
+        <Point X="22.625" Y="5.568" />
+        <Point X="28.418" Y="5.568" />
+        <Point X="28.418" Y="5.562" />
+        <Point X="29.5" Y="5.562" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAQAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Clothing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Dress">
+    <Position X="26.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dress.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Employee">
+    <Position X="2.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.EmployeeFile">
+    <Position X="16.5" Y="14.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAICAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>EmployeeFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.EmployeePage" Collapsed="true">
+    <Position X="35.75" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAAAAABCCQQBAAIBCAAAACBAAIAgEAQUAAQACAAIQ=</HashCode>
+      <FileName>EmployeePage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.FoodProduct">
+    <Position X="33.75" Y="3.25" Width="1.5" />
+    <InheritanceLine Type="Coursework.Product" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="23" Y="2.125" />
+        <Point X="34.375" Y="2.125" />
+        <Point X="34.375" Y="3.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>EAAAABAAAAAAEAAABAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>FoodProduct.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Footwear">
+    <Position X="15.75" Y="4.25" Width="1.5" />
+    <InheritanceLine Type="Coursework.Product" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="22.25" Y="2.824" />
+        <Point X="22.25" Y="5.703" />
+        <Point X="17.25" Y="5.703" />
+        <Point X="17.25" Y="5.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AEAAAAAABAAAEAQAAAAAAAAAAAAAAAAAAAAEAABAAAA=</HashCode>
+      <FileName>Footwear.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Headwear">
+    <Position X="5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Headwear.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.HomeGoods">
+    <Position X="7.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HomeGoods.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.InventoryPage" Collapsed="true">
+    <Position X="37.5" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIAAAACCAAABAAIACCAABCBBAAAAABAQAAAAAAAAQ=</HashCode>
+      <FileName>InventoryPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Jewelry">
+    <Position X="11.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Jewelry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.MyMessageBox" Collapsed="true">
+    <Position X="30.5" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAAAAACAAAACAABAEAAEAAAAAAAAAAA=</HashCode>
+      <FileName>MyMessageBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Outerwear">
+    <Position X="33" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Outerwear.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Pajamas">
+    <Position X="39.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pajamas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Pants">
+    <Position X="21.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.PasswordPage" Collapsed="true">
+    <Position X="32.25" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAACAGQAAJAAOCCIAEACBAAAhAAAEQAAAAAAAAQ=</HashCode>
+      <FileName>PasswordPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.PhoneAccessories">
+    <Position X="9.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PhoneAccessories.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Product">
+    <Position X="21.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAEAQAIAAAAAQAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.ProductPage" Collapsed="true">
+    <Position X="34" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQRgAAAAAGAAABEAICCAACDC9EkABAKJQYAAAABAAAQ=</HashCode>
+      <FileName>ProductPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Program">
+    <Position X="14.75" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.ReducePricePage" Collapsed="true">
+    <Position X="37.5" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACBAABAAMACEAAAKBAAAgQABAQAAAAIGAAQ=</HashCode>
+      <FileName>ReducePricePage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.RemoveProductPage" Collapsed="true">
+    <Position X="30.5" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAIACAAABAAMACAAAACRAAAgBABQQAAAAAAAAQ=</HashCode>
+      <FileName>RemoveProductPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Sandals">
+    <Position X="12.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sandals.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Shoes">
+    <Position X="16.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Shoes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.ShoppingCart">
+    <Position X="22" Y="14.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAgAAAAAgACAAAIEAAAoAAAAAAA=</HashCode>
+      <FileName>ShoppingCart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.ShoppingCartItem" Collapsed="true">
+    <Position X="37.5" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAQAABAAAAgAAAAIA=</HashCode>
+      <FileName>ShoppingCartItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.ShoppingCartPage" Collapsed="true">
+    <Position X="34" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAAAAIgCAAABAEIICAAYACBIEgABKBAVgAAACAAAQ=</HashCode>
+      <FileName>ShoppingCartPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Shorts">
+    <Position X="28.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Shorts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Skirt">
+    <Position X="35.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Skirt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Slippers">
+    <Position X="19" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Slippers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Sneakers">
+    <Position X="14.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sneakers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Sportswear">
+    <Position X="24" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sportswear.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.StartBuyerPage" Collapsed="true">
+    <Position X="32.25" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAADAGIAQLAAKACAAAACBEAEgAAAUQAAAAAAAAQ=</HashCode>
+      <FileName>StartBuyerPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.StartPage" Collapsed="true">
+    <Position X="35.75" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQIAAAAACAACBEAIACABAACABAAAAAAEAAAAAAAAAQ=</HashCode>
+      <FileName>StartPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Store">
+    <Position X="18.75" Y="14.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAIAQAQAFKYAAAAAACAAABAYAABgAABIA=</HashCode>
+      <FileName>Store.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Sweater">
+    <Position X="30.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sweater.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.TShirt">
+    <Position X="37.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TShirt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.User">
+    <Position X="6" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAg=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Properties.Resources" Collapsed="true">
+    <Position X="28.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Properties.Settings" Collapsed="true">
+    <Position X="34" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
