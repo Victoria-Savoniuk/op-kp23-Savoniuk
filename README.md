@@ -1,18 +1,49 @@
-# op-kp23-Savoniuk
-##База наявності товарів
+Object-oriented programming. Sem 2. Assignment 4.
 
-- Розробка бази даних для зберігання інформації про товари, включаючи найменування, одиниці виміру, 
-ціну одиниці, кількість, розмір, дату виготовлення та термін придатності.
+In class, the Set Abstract Data Type was covered and how to use Hash Tables to implement the Set ADT. One natural use of a set is to hold the words in a spelling dictionary. This makes looking up the words very efficient. In this assignment, you will implement and use such a dictionary. The interface of the Hashtable class is below: 
 
-- Реалізація функціоналу реєстрації надходження товару, включаючи як старі, так і нові найменування товарів.
+public class HashTable<KItem, VItem>
+{
+     
+        public HashTable()
+        { ... }
 
-- Розробка функцій для оформлення покупки, включаючи виписку чека та коректування бази даних.
+        public HashTable(int intialCapacity)
+        { ... }
 
-- Розробка механізмів уцінки та списання товарів з можливістю оновлення бази даних.
+        public void Add(KItem key, VItem value)
+        {
+           ...
+        }
 
-- Реалізація функціоналу інвентаризації залишків товару з обчисленням сумарної вартості.
+        public void Remove(KItem key)
+        {
+           ...
+        }
 
-- Розробка системи входу для покупців, з можливістю перегляду товарів, додавання товарів в кошик, 
-очищення кошика, оформлення покупки, виписки чеку та збереження чеку у файл.
+        public VItem Get(KItem key)
+        {
+            ...
+        }
+        
+        public boolean Contains(VItem key)
+        {
+            ...
+        }
+        
+        public void clear() 
+        {
+           ...
+        }
+        
+        public int size()
+        {
+           ...
+        }
+}
 
-- Зчитування файлу працівників та перевірка дійсності вхідних даних перед входом до системи для працівників.
+Choose one of four methods for resolving collisions that were discussed in the lecture. Be ready to explain all 4 methods. 
+
+The second part of the assignment is to write a main program that uses your hash table class. The main program will behave like the standard Linux utility program ispell, when that program is used interactively to check individual words. To try it, enter the command ispell on the command line. You will be prompted to enter words. 
+But we will implement a simplified version.
+Your program will return ok, if the word is in the dictionary and WrongSpelling if the word is not present in the dictionary. The dictionary should contain at least 50 words. 
