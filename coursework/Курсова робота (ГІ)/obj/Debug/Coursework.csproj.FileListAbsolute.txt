@@ -1,0 +1,28 @@
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\bin\Debug\Курсова робота (ГІ).exe.config
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\bin\Debug\Курсова робота (ГІ).exe
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\bin\Debug\Курсова робота (ГІ).pdb
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Coursework.csproj.AssemblyReference.cache
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Coursework.csproj.SuggestedBindingRedirects.cache
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Coursework.AddProductPage.resources
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Coursework.BuyerPage.resources
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Coursework.EmployeePage.resources
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Coursework.MyMessageBox.resources
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Coursework.PasswordPage.resources
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Coursework.StartBuyerPage.resources
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Coursework.StartPage.resources
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Coursework.csproj.GenerateResource.cache
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Coursework.csproj.CoreCompileInputs.cache
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Курсова робота (ГІ).exe
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Курсова робота (ГІ).pdb
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Coursework.unitPage.resources
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Coursework.AddClothesPage.resources
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Coursework.AddFoodPage.resources
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Coursework.AddFootwearPage.resources
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Coursework.CheckPage.resources
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Coursework.InventoryPage.resources
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Coursework.ProductPage.resources
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Coursework.Properties.Resources.resources
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Coursework.ReducePricePage.resources
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Coursework.RemoveProductPage.resources
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Coursework.ShoppingCartPage.resources
+C:\Users\Віта\Desktop\my project\Курсова робота (ГІ)\Курсова робота (ГІ)\obj\Debug\Coursework.AddOldProductPage.resources

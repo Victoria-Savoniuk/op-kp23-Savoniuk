@@ -47,6 +47,3 @@ Choose one of four methods for resolving collisions that were discussed in the l
 The second part of the assignment is to write a main program that uses your hash table class. The main program will behave like the standard Linux utility program ispell, when that program is used interactively to check individual words. To try it, enter the command ispell on the command line. You will be prompted to enter words. 
 But we will implement a simplified version.
 Your program will return ok, if the word is in the dictionary and WrongSpelling if the word is not present in the dictionary. The dictionary should contain at least 50 words. 
-
-
-
